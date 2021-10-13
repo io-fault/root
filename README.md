@@ -10,12 +10,19 @@ The scripts presumes ownership of the target directory.
 
 # Supported Platforms
 
-Currently Linux is not supported due to lack of kqueue support.
+Currently Linux is not supported due to the absence of kqueue.
 
 * FreeBSD
 * macOS
 
 Python 3.9 or higher is required.
+
+# Fetch Root Repository
+
+```shell
+	git clone -b master --depth 1 https://github.com/io-fault/github-root fault-gh-root
+	cd fault-gh-root
+```
 
 # install.sh
 
