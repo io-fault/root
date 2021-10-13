@@ -20,7 +20,7 @@ Python 3.9 or higher is required.
 # Fetch Root Repository
 
 ```shell
-	git clone -b master --depth 1 https://github.com/io-fault/github-root fault-gh-root
+	git clone -b master --depth 1 https://github.com/io-fault/root fault-gh-root
 	cd fault-gh-root
 ```
 
