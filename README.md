@@ -6,7 +6,7 @@ is not advisable as the applicable set may change.
 
 In the presented instructions, `/opt/fault` is used as the target directory.
 However, any directory may be used as a target.
-The scripts presumes ownership of the target directory.
+The scripts presume ownership of the target directory.
 
 # Supported Platforms
 
