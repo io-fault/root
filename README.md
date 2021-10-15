@@ -1,4 +1,4 @@
-# fault.io core projects
+# fault.io Core Projects
 
 This repository provides scripts for managing the installation or retrieval of the fault.io
 projects using the repositories and packages available on github. Directly cloning repositories
@@ -6,9 +6,8 @@ is not advisable as the applicable set may change.
 
 In the presented instructions, `/opt/fault` is used as the target directory.
 However, any directory may be used as a target.
-The scripts presume ownership of the target directory.
 
-# Supported Platforms
+## Supported Platforms
 
 Currently Linux is not supported due to the absence of kqueue.
 
@@ -17,20 +16,21 @@ Currently Linux is not supported due to the absence of kqueue.
 
 Python 3.9 or higher is required.
 
-# Fetch Root Repository
+## Environment
 
 ```shell
-	# Modify as needed for suitable permissions.
-	# root user execution is *not* required by installation.
 	mkdir -p /opt/fault
 	cd /opt/fault
+```
 
-	# Fetch this repository.
+## Fetching this Repository
+
+```shell
 	git clone -b master --depth 1 https://github.com/io-fault/root
 	cd root
 ```
 
-# install.sh
+## install.sh
 
 An aggregate script combining retrieval and setup.
 
@@ -38,7 +38,7 @@ An aggregate script combining retrieval and setup.
 	./github/install.sh /opt/fault
 ```
 
-# retrieve.sh
+## retrieve.sh
 
 Script used to fetch shallow clones of the repository set into a directory structured for use:
 
@@ -46,10 +46,10 @@ Script used to fetch shallow clones of the repository set into a directory struc
 	./github/retrieve.sh /opt/fault
 ```
 
-# setup.sh
+## setup.sh
 
-Script presuming that the target directory is a fault root directory.
-Executes system/root/setup.sh in order to bootstrap and build the core tools.
+Bootstrap and build the core the projects.
+Presumes `github/retrieve.sh` has been ran.
 
 ```shell
 	./github/setup.sh /opt/fault
