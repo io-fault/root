@@ -20,8 +20,14 @@ Python 3.9 or higher is required.
 # Fetch Root Repository
 
 ```shell
-	git clone -b master --depth 1 https://github.com/io-fault/root fault-gh-root
-	cd fault-gh-root
+	# Modify as needed for suitable permissions.
+	# root user execution is *not* required by installation.
+	mkdir -p /opt/fault
+	cd /opt/fault
+
+	# Fetch this repository.
+	git clone -b master --depth 1 https://github.com/io-fault/root
+	cd root
 ```
 
 # install.sh
