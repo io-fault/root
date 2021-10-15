@@ -35,7 +35,7 @@ Python 3.9 or higher is required.
 An aggregate script combining retrieval and setup.
 
 ```shell
-	sh ./github/install.sh /opt/fault
+	./github/install.sh /opt/fault
 ```
 
 # retrieve.sh
@@ -43,7 +43,7 @@ An aggregate script combining retrieval and setup.
 Script used to fetch shallow clones of the repository set into a directory structured for use:
 
 ```shell
-	sh ./github/retrieve.sh /opt/fault
+	./github/retrieve.sh /opt/fault
 ```
 
 # setup.sh
@@ -52,5 +52,5 @@ Script presuming that the target directory is a fault root directory.
 Executes system/root/setup.sh in order to bootstrap and build the core tools.
 
 ```shell
-	sh ./github/setup.sh /opt/fault
+	./github/setup.sh /opt/fault
 ```
