@@ -7,9 +7,14 @@ is not advisable as the applicable set may change.
 In the presented instructions, `/opt/fault` is used as the target directory.
 However, any directory may be used as a target.
 
+## Status
+
+The projects installed by these scripts are not properly documented and are not likely
+useful to anyone other than the author.
+
 ## Supported Platforms
 
-Currently Linux is not supported due to the absence of kqueue.
+Currently, Linux is not supported due to the absence of kqueue.
 
 * FreeBSD
 * macOS
