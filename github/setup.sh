@@ -14,6 +14,7 @@ fi
 int_product()
 {
 	cd "$1" || return
+	"$FAULT_ROOT/bin/pdctl" index
 	"$FAULT_ROOT/bin/pdctl" -x "$FAULT_ROOT/host/cc" integrate -u "$2"
 }
 
