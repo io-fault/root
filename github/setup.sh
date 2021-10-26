@@ -13,9 +13,7 @@ fi
 
 int_product()
 {
-	cd "$1" || return
-	"$FAULT_ROOT/bin/pdctl" index
-	"$FAULT_ROOT/bin/pdctl" -x "$FAULT_ROOT/host/cc" integrate -u "$2"
+	"$FAULT_ROOT/bin/pdctl" -D "$1" -x "$FAULT_ROOT/host/cc" integrate -U "$2"
 }
 
 (int_product ./development meta)
