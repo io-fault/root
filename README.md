@@ -35,27 +35,10 @@ Python 3.9 or higher is required.
 	cd root
 ```
 
-## install.sh
+## Installation
 
 An aggregate script combining retrieval and setup.
 
 ```shell
 	./github/install.sh /opt/fault
-```
-
-## retrieve.sh
-
-Script used to fetch shallow clones of the repository set into a directory structured for use:
-
-```shell
-	./github/retrieve.sh /opt/fault
-```
-
-## setup.sh
-
-Bootstrap and build the core the projects.
-Presumes `github/retrieve.sh` has been ran.
-
-```shell
-	./github/setup.sh /opt/fault
 ```
