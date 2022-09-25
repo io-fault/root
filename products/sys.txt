@@ -4,7 +4,6 @@ daemons
 factors
 machines
 networks
-platforms
 products
 python
 root
