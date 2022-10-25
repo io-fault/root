@@ -9,7 +9,7 @@ DEV="$FAULT_ROOT/development"
 bind_factor()
 {
 	"$FAULT_ROOT/bin/fault-tool" python .module \
-		system.python.bin.bind \
+		system.machines.python.bind \
 		-ioptimal "-F$PYD/fault" "-L$SYS" "-L$DEV" \
 		"$FAULT_ROOT/bin/$1" "$2"
 }
