@@ -3,7 +3,6 @@ context
 daemons
 factors
 machines
-networks
 products
 python
 root
