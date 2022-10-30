@@ -9,16 +9,16 @@ However, any directory may be used as a target.
 
 ## Status
 
-The projects installed by these scripts are not properly documented and are not likely
-useful to anyone other than the author.
+The projects installed by these scripts are not properly tested or documented and are not likely
+to be useful to anyone.
 
-## Supported Platforms
+## Platforms
 
-Currently, Linux is not supported due to the absence of kqueue.
-
-* FreeBSD
 * macOS
+* FreeBSD
+* Linux
 
+With FreeBSD and Linux only being occasionally tested.
 Python 3.9 or higher is required.
 
 ## Environment
