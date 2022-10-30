@@ -15,7 +15,7 @@ get_repo ()
 	rname="$5"
 	shift 5
 
-	ghr="${ghprefix}$rname"
+	ghr="$ghprefix$rname"
 	ri="https://github.com/io-fault/$ghr"
 	path="$root/$rpath/$ctx/$rname"
 
@@ -29,7 +29,7 @@ get_repo ()
 	fi
 }
 
-setup_root_dir()
+setup_root_dir ()
 {
 	local root
 	root="$1"
