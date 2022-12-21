@@ -1,6 +1,5 @@
 context
 format
-hkp
 internet
 kernel
 project
