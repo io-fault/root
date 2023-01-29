@@ -22,7 +22,7 @@ get_repo ()
 	if test -d "$path"
 	then
 		echo "updating $ghr at $path"
-		(cd "$path" && git pull -q gh "$BRANCH")
+		(cd "$path" || exit; git stash -q; git clean -fd; git pull -q gh "$BRANCH")
 	else
 		echo "cloning $ghr to $path"
 		git clone -o gh -q -b "$BRANCH" $clone_depth "$ri" "$path"
