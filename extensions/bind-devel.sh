@@ -15,4 +15,4 @@ bind_factor()
 }
 
 bind_factor "wkctl" "meta.workspaces.bin.control"
-bind_factor "sy" "meta.syntax.bin.editor"
+bind_factor "sy" "meta.syntax.edit"
