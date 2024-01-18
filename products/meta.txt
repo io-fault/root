@@ -1,5 +1,0 @@
-context
-syntax
-workspaces
-metrics
-tools
