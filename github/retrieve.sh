@@ -3,7 +3,7 @@ ROOT="$1"
 BRANCH="${2:-master}"
 
 clone_depth="--depth 1"
-product_directories="python/fault integration/system development/meta"
+product_directories="python/fault integration/system"
 
 get_repo ()
 {
@@ -61,11 +61,5 @@ wait
 for x in $(cat products/sys.txt)
 do
 	get_repo "$ROOT" integration sys- system "$x" &
-done
-wait
-
-for x in $(cat products/meta.txt)
-do
-	get_repo "$ROOT" development meta- meta "$x" &
 done
 wait

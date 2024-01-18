@@ -10,11 +10,3 @@ then
 else
 	"$SETUP" "$FAULTPYTHON"
 fi
-
-int_product ()
-{
-	"$FAULT_ROOT/bin/pdctl" -D "$1" -x "$FAULT_ROOT/host/cc" integrate -U "$2"
-}
-
-(int_product ./development meta)
-"$SCRIPTDIR/extensions/bind-devel.sh" "$FAULT_ROOT"
