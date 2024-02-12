@@ -3,28 +3,25 @@ ROOT="$1"
 BRANCH="${2:-master}"
 
 clone_depth="--depth 1"
-product_directories="python/fault integration/system"
 
 get_repo ()
 {
-	local ghprefix root rpath ghprefix rname
-	root="$1"
-	rpath="$2"
-	ghprefix="$3"
+	local repo root rpath ctx rname
+	repo="$1"
+	root="$2"
+	rpath="$3"
 	ctx="$4"
-	rname="$5"
-	shift 5
+	shift 4
 
-	ghr="$ghprefix$rname"
-	ri="https://github.com/io-fault/$ghr"
-	path="$root/$rpath/$ctx/$rname"
+	ri="https://github.com/io-fault/$repo"
+	path="$root/$rpath/$ctx"
 
 	if test -d "$path"
 	then
-		echo "updating $ghr at $path"
+		echo "updating $ri at $path"
 		(cd "$path" || exit; git stash -q; git clean -fd; git pull -q gh "$BRANCH")
 	else
-		echo "cloning $ghr to $path"
+		echo "cloning $ri to $path"
 		git clone -o gh -q -b "$BRANCH" $clone_depth "$ri" "$path"
 	fi
 }
@@ -51,15 +48,7 @@ setup_root_dir ()
 }
 
 (setup_root_dir "$ROOT")
-
-for x in $(cat products/py.txt)
-do
-	get_repo "$ROOT" python py- fault "$x" &
-done
-wait
-
-for x in $(cat products/sys.txt)
-do
-	get_repo "$ROOT" integration sys- system "$x" &
-done
+get_repo python "$ROOT" python fault &
+get_repo integration "$ROOT" integration system &
+get_repo terminal "$ROOT" integration terminal &
 wait

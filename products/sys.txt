@@ -1,8 +1,0 @@
-chapters
-context
-daemons
-factors
-machines
-products
-python
-root

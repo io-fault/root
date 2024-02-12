@@ -1,4 +1,4 @@
-# fault.io Core Projects
+# fault.io Projects
 
 This repository provides scripts for managing the installation or retrieval of the fault.io
 projects using the repositories and packages available on github. Directly cloning repositories
@@ -10,7 +10,7 @@ However, any directory may be used as a target.
 ## Status
 
 The projects installed by these scripts are not properly tested or documented and are not likely
-to be useful to anyone.
+to be useful.
 
 ## Platforms
 
@@ -37,7 +37,7 @@ Python 3.9 or higher is required.
 
 ## Installation
 
-An aggregate script combining retrieval and setup.
+An aggregate script combining retrieval and setup at the target location.
 
 ```shell
 	./github/install.sh /opt/fault
