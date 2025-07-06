@@ -38,17 +38,17 @@ setup_root_dir ()
 	fi
 
 	cd "$root" || return
-	for x in $product_directories
+	for x in "$@"
 	do
 		if ! test -d "$x"
 		then
-			mkdir -p "$x"
+			mkdir "$x"
 		fi
 	done
 }
 
-(setup_root_dir "$ROOT")
+(setup_root_dir "$ROOT" python integration interface)
 get_repo python "$ROOT" python fault &
 get_repo integration "$ROOT" integration system &
-get_repo terminal "$ROOT" integration terminal &
+get_repo terminal "$ROOT" interface terminal &
 wait
